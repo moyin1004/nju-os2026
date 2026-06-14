@@ -13,6 +13,14 @@ typedef struct {
     int col;
 } Position;
 
+enum ErrorCode {
+    SUCCESS = 0,
+    INVALID_ARGUMENT = 1,
+    INVALID_PLAYER_ID = 1,
+    INVALID_MOVE_DIRECTION = 1,
+    INVALID_MAP_FILE = 1,
+};
+
 
 bool isValidPlayer(char playerId);
 bool loadMap(Labyrinth *labyrinth, const char *filename);
